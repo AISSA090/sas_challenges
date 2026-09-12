@@ -15,3 +15,26 @@
 // 1. Identifie les données nécessaires.
 // 2. Écris ta solution sous cette ligne.
 // TODO: écris ta solution ici.
+const cashe={};
+
+function calculateandreturncashe(num){
+    if ( num in cashe){
+
+    return cashe[num]
+ }
+
+    let resultat=0;
+
+    for (let i = 0; i < 5000; i++) {
+
+     resultat += Math.sqrt(i + num)*i;
+
+  }
+
+  cashe[num]=resultat;
+
+ 
+
+ return resultat
+
+} 
