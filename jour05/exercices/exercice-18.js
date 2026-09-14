@@ -15,3 +15,12 @@
 // 1. Identifie les données nécessaires.
 // 2. Écris ta solution sous cette ligne.
 // TODO: écris ta solution ici.
+function counting(phrase){
+ let counter=0;
+    for(let i=0;i<phrase.length;i++){
+        if(phrase[i]=="e" ||phrase[i]=="E"){
+            counter++;
+        }
+    }
+    return counter
+}
