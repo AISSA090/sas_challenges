@@ -15,3 +15,17 @@
 // 1. Identifie les données nécessaires.
 // 2. Écris ta solution sous cette ligne.
 // TODO: écris ta solution ici.
+function ceaser(text ,decalage){
+    let codedtext=""
+    let codedindex=0
+    for(let i=0;i<text.length;i++){
+        if(text[i]==" "){
+         codedtext+=" "
+        }else{
+          let index=text.charCodeAt(i)
+          codedindex=(((index)-65+decalage)%26)+65
+          codedtext+=String.fromCharCode(codedindex)
+        }
+    }
+    return codedtext
+}
