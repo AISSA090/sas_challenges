@@ -24,3 +24,17 @@
 
 // Découpe d'abord le problème en petites étapes.
 // TODO: écris ta solution ici.
+let tab=["noob", "idiot", "nul"]
+function filtrerMessage(phrase,tab){
+    let word = phrase.split(" "); 
+    for(let i = 0; i < word.length; i++){
+        if(tab.includes(word[i].toLowerCase())){
+            let stars=""
+            for(let j=0;j<word[i].length;j++){
+                stars+="*"
+            }
+            word[i] =  stars
+        }
+    }
+   return word.join(" ");
+}
