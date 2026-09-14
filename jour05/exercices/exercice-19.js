@@ -15,3 +15,20 @@
 // 1. Identifie les données nécessaires.
 // 2. Écris ta solution sous cette ligne.
 // TODO: écris ta solution ici.
+function verifier(plaque){
+    let text ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    let tab =plaque.split("-");
+    if(tab.length != 3){
+        return false
+    }
+    let milieu= tab[1]
+    if(milieu.length == 0){
+        return false
+    }
+    for(let i=0;i<milieu.length; i++){
+        if(!text.includes(milieu[i])){
+         return false
+        }
+    }
+    return true
+}
